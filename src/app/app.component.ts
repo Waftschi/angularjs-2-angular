@@ -1,3 +1,6 @@
+// import 'angular';
+// const m = angular.module('AngularJsModule', []);
+
 import { Component } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
 
@@ -9,7 +12,7 @@ export class AppComponent  { name = 'Angular';
 
 
     constructor(private upgrade: UpgradeModule) { }
-    ngDoBootstrap() {
-        this.upgrade.bootstrap(document.body, ['heroApp'], { strictDi: true });
-    }
+    // ngDoBootstrap() {
+    //     this.upgrade.bootstrap(document.body, ['heroApp'], { strictDi: true });
+    // }
 }

@@ -14,16 +14,20 @@
     <script src="node_modules/systemjs/dist/system.src.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.js"></script>
     <script src="systemjs.config.js"></script>
+
     <script>
       System.import('main.js').catch(function(err){ console.error(err); });
+      System.import('angularjs/app.module.js').catch(function(err){ console.error(err); });
     </script>
+    <!--<script src="angularjs/app.module.js"></script>-->
   </head>
 
   <body>
   <div id="message" ng-controller="MainCtrl as mainCtrl">
+    <hero-detail [message]="mainCtrl.message"></hero-detail>
     {{ mainCtrl.message }}
   </div>
     <my-app>Loading AppComponent content here ...</my-app>
   </body>
-  <script src="angularjs/app.module.js"></script>
+
 </html>
